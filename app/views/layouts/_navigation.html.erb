@@ -1,15 +1,22 @@
 <ul class="nav navbar-nav">
-  <li>
-    <%= link_to('<span class="glyphicon glyphicon-home"></span> Home'.html_safe, root_path) %>
-  </li>
   <% if current_user %>
+    <li>
+      <%= link_to('<span class="glyphicon glyphicon-th-large"></span>Mesas'.html_safe,mesas_path) %>
+    </li>
   <% end %>
 </ul>
 <ul class="nav navbar-nav navbar-right">
-  <li>
-    <%= link_to('<span class="glyphicon glyphicon-home"></span> Home'.html_safe, root_path) %>
-  </li>
   <% if current_user %>
+    <li>
+      <span class="navbar-text">
+        <strong><%= t('welcome') %></strong>
+        <%=  %>
+        <%= current_user.full_name %>
+      </span>
+    </li>
+    <li>
+      <%= link_to('<span class="glyphicon glyphicon-cog"></span> Settings'.html_safe, edit_user_registration_path)%>
+    </li>
     <li>
       <%= link_to('<span class="glyphicon glyphicon-off"></span> Log out'.html_safe, destroy_user_session_path, method: 'delete') %>
     </li>
