@@ -1,5 +1,9 @@
-<h1>New Mesa</h1>
+<%= content_for :title do %>
+  <%= 'New Mesa' %>
+<% end %>
+
+<div class="text-center">
+  <h1>New Mesa</h1>
+</div>
 
 <%= render 'form', mesa: @mesa %>
-
-<%= link_to 'Back', mesas_path %>

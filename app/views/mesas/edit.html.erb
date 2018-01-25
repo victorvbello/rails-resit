@@ -1,6 +1,9 @@
-<h1>Editing Mesa</h1>
+<%= content_for :title do %>
+  <%= 'Editing Mesa' %>
+<% end %>
+
+<div class="text-center">
+  <h1>Editing Mesa</h1>
+</div>
 
 <%= render 'form', mesa: @mesa %>
-
-<%= link_to 'Show', @mesa %> |
-<%= link_to 'Back', mesas_path %>

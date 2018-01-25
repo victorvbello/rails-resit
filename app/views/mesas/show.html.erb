@@ -1,29 +1,42 @@
-<p id="notice"><%= notice %></p>
+<%= content_for :title do %>
+  <%= 'Detalle' %>
+<% end %>
 
-<p>
-  <strong>Nombre:</strong>
-  <%= @mesa.nombre %>
-</p>
+<div class="text-center">
+  <h1>Detalle de mesa <strong><%= @mesa.nombre %></strong></h1>
+</div>
 
-<p>
-  <strong>Descripcion:</strong>
-  <%= @mesa.descripcion %>
-</p>
+<div class="row">
+  <div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 col-xs-12">
+    <div class="panel.panel-default">
+      <div class="panel-body">
+        <div class="list-group">
+          <div class="list-group-item">
+            <h4 class="list-group-item-heading"><strong>Nombre</strong></h4>
+            <p class="list-group-item-text"><%= @mesa.nombre %></p>
+          </div>
 
-<p>
-  <strong>Tipo:</strong>
-  <%= @mesa.tipo %>
-</p>
+          <div class="list-group-item">
+            <h4 class="list-group-item-heading"><strong>Descripcion</strong></h4>
+            <p class="list-group-item-text"><%= @mesa.descripcion %></p>
+          </div>
 
-<p>
-  <strong>Numero pata:</strong>
-  <%= @mesa.numero_pata %>
-</p>
+          <div class="list-group-item">
+            <h4 class="list-group-item-heading"><strong>Tipo</strong></h4>
+            <p class="list-group-item-text"><%= @mesa.tipo %></p>
+          </div>
 
-<p>
-  <strong>Material:</strong>
-  <%= @mesa.material %>
-</p>
+          <div class="list-group-item">
+            <h4 class="list-group-item-heading"><strong>Patas</strong></h4>
+            <p class="list-group-item-text"><%= @mesa.numero_pata %></p>
+          </div>
 
-<%= link_to 'Edit', edit_mesa_path(@mesa) %> |
-<%= link_to 'Back', mesas_path %>
+          <div class="list-group-item">
+            <h4 class="list-group-item-heading"><strong>Material</strong></h4>
+            <p class="list-group-item-text"><%= @mesa.material %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

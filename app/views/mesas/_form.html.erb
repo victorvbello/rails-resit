@@ -1,42 +1,50 @@
-<%= form_with(model: mesa, local: true) do |form| %>
-  <% if mesa.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(mesa.errors.count, "error") %> prohibited this mesa from being saved:</h2>
+<div class="row">
+  <div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 col-xs-12">
+    <div class="panel.panel-default">
+      <div class="panel-body">
+        <%= form_with(model: mesa, local: true) do |form| %>
+          <% if mesa.errors.any? %>
+            <div class="alert alert-warning">
+              <h2><%= pluralize(mesa.errors.count, "error") %> prohibited this mesa from being saved:</h2>
 
-      <ul>
-      <% mesa.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+              <ul>
+              <% mesa.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class="form-group">
+            <%= form.label :nombre %>
+            <%= form.text_field :nombre, id: :mesa_nombre , class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= form.label :descripcion %>
+            <%= form.text_field :descripcion, id: :mesa_descripcion , class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= form.label :tipo %>
+            <%= form.text_field :tipo, id: :mesa_tipo , class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= form.label "patas" %>
+            <%= form.number_field :numero_pata, id: :mesa_numero_pata , class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= form.label :material %>
+            <%= form.text_field :material, id: :mesa_material , class: 'form-control' %>
+          </div>
+
+          <div class="actions">
+            <%= form.submit class: 'btn btn-primary btn-block' %>
+          </div>
+        <% end %>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :nombre %>
-    <%= form.text_field :nombre, id: :mesa_nombre %>
   </div>
-
-  <div class="field">
-    <%= form.label :descripcion %>
-    <%= form.text_field :descripcion, id: :mesa_descripcion %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tipo %>
-    <%= form.text_field :tipo, id: :mesa_tipo %>
-  </div>
-
-  <div class="field">
-    <%= form.label :numero_pata %>
-    <%= form.number_field :numero_pata, id: :mesa_numero_pata %>
-  </div>
-
-  <div class="field">
-    <%= form.label :material %>
-    <%= form.text_field :material, id: :mesa_material %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
