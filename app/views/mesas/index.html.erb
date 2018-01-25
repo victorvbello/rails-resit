@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mesas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Tipo</th>
+      <th>Numero pata</th>
+      <th>Material</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mesas.each do |mesa| %>
+      <tr>
+        <td><%= mesa.nombre %></td>
+        <td><%= mesa.descripcion %></td>
+        <td><%= mesa.tipo %></td>
+        <td><%= mesa.numero_pata %></td>
+        <td><%= mesa.material %></td>
+        <td><%= link_to 'Show', mesa %></td>
+        <td><%= link_to 'Edit', edit_mesa_path(mesa) %></td>
+        <td><%= link_to 'Destroy', mesa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mesa', new_mesa_path %>
