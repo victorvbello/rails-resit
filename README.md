@@ -19,6 +19,7 @@
     gem 'simplecov'
 #### Installation
     bundle install
+    rails db:migrate
 #### Run Test
     rspec
     coverage UI Open /coverage/index.html

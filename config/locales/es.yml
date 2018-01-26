@@ -17,3 +17,4 @@ es:
         password: "Clave"
         password_confirmation: "Confimación de clave" 
         current_password: "Calave actual"
+        remember_me: "Recordarme"

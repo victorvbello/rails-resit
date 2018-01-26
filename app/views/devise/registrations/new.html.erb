@@ -1,9 +1,9 @@
 <%= content_for :title do %>
-  <%= 'Registration' %>
+  <%= 'Registro' %>
 <% end %>
 
 <div class="text-center">
-  <h1>Register here</h1>
+  <h1>Registrate aquí</h1>
 </div>
 
 <div class="row">
@@ -34,7 +34,7 @@
           <div class="field">
             <%= f.label :password %>
             <% if @minimum_password_length %>
-            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <em>minimo <%= @minimum_password_length %> caracteres</em>
             <% end %><br />
             <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
           </div>
@@ -45,14 +45,14 @@
           </div>
 
           <div class="actions">
-            <%= f.submit "Sign up", class: 'btn btn-primary btn-block' %>
+            <%= f.submit "Registrate", class: 'btn btn-primary btn-block' %>
           </div>
         <% end %>
       </div>
       <div class="panel-footer">
         <p>
-          <%= 'Already Registered? Log In '%>
-          <%= link_to('here', new_user_session_path) %>
+          <%= '¿Ya registrado? Iniciar sesión '%>
+          <%= link_to('aquí', new_user_session_path) %>
         </p>
       </div>
     </div>
