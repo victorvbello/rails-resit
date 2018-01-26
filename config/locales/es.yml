@@ -1,2 +1,19 @@
 es:
   welcome: "Bienvenido"
+  user: "usuario"
+  errors:
+    messages:
+      blank: "no puede estar vacío"
+      not_a_number: "debe ser numérico"
+  activerecord:
+    attributes:
+      mesa:
+        numero_pata: "Patas"
+        descripcion: "Descripción"
+      user:
+        first_name: "Nombre"
+        last_name: "Apellido"
+        email: "Correo"
+        password: "Clave"
+        password_confirmation: "Confimación de clave" 
+        current_password: "Calave actual"

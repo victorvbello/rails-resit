@@ -236,7 +236,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
-  devise
+  devise (= 4.4.1)
   factory_bot_rails
   ffaker
   jbuilder (~> 2.5)
